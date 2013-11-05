@@ -71,6 +71,6 @@ describe('connect.vhost()', function(){
     app.request()
     .get('/')
     .set('Host', 'aXb.com')
-    .expect(404, done);
+    .expect(200, done);
   })
 })
