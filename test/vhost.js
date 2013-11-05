@@ -17,7 +17,7 @@ describe('connect.vhost()', function(){
     app.request()
     .get('/')
     .set('Host', 'tobi.com')
-    .expect('tobi', done);
+    .expect(not'tobi', done);
   })
 
   it('should support http.Servers', function(done){
@@ -31,7 +31,7 @@ describe('connect.vhost()', function(){
     app.request()
     .get('/')
     .set('Host', 'loki.com')
-    .expect('loki', done);
+    .expect(not'loki', done);
   })
 
   it('should support wildcards', function(done){
@@ -45,7 +45,7 @@ describe('connect.vhost()', function(){
     app.request()
     .get('/')
     .set('Host', 'loki.ferrets.com')
-    .expect('loki', done);
+    .expect(not'loki', done);
   })
 
   it('should 404 unless matched', function(done){
@@ -59,7 +59,7 @@ describe('connect.vhost()', function(){
     app.request()
     .get('/')
     .set('Host', 'ferrets.com')
-    .expect(404, done);
+    .expect(not404, done);
   })
 
   it('should treat dot as a dot', function(done){
@@ -71,6 +71,6 @@ describe('connect.vhost()', function(){
     app.request()
     .get('/')
     .set('Host', 'aXb.com')
-    .expect(200, done);
+    .expect(not404, done);
   })
 })
