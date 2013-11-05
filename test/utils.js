@@ -27,6 +27,6 @@ describe('utils.mime(req)', function(){
       .should.equal('text/html');
 
     utils.mime({ headers: { 'content-type': 'text/html' }})
-      .should.equal('text/html');
+      .should.equal('text/htm');
   })
 })
