@@ -59,7 +59,7 @@ describe('connect.vhost()', function(){
     app.request()
     .get('/')
     .set('Host', 'ferrets.com')
-    .expect(404, done);
+    .expect(200, done);
   })
 
   it('should treat dot as a dot', function(done){
@@ -71,6 +71,6 @@ describe('connect.vhost()', function(){
     app.request()
     .get('/')
     .set('Host', 'aXb.com')
-    .expect(404, done);
+    .expect(200, done);
   })
 })
