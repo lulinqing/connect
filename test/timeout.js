@@ -64,7 +64,7 @@ describe('connect.timeout()', function(){
 
         app.request()
         .get('/')
-        .expect('Hello wrong World', done);
+        .expect('Hello World', done);
       })
     })
   })
@@ -82,7 +82,7 @@ describe('connect.timeout()', function(){
 
       app.request()
       .get('/')
-      .expect('Hello wrong', done);
+      .expect('Hello', done);
     })
   })
 })
