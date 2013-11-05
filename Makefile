@@ -1,6 +1,6 @@
 
 TESTS = test/*.js
-REPORTER = xunit
+REPORTER = tap
 DOX = ./node_modules/.bin/dox
 
 SRC = $(shell find lib/*.js lib/middleware/*.js)
